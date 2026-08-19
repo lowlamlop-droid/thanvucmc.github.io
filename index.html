@@ -5,139 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thần Vực Network - Minecraft Tu Tiên</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #07070b; color: #d1d5db; }
+        body { font-family: 'Inter', sans-serif; background-color: #050508; color: #d1d5db; overflow-x: hidden; }
         .title-font { font-family: 'Cinzel', serif; }
-        .glass-card { background: rgba(18, 18, 26, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(139, 92, 246, 0.15); }
-        .glass-card:hover { border-color: rgba(139, 92, 246, 0.4); }
-        .glow-text { text-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+        .glass-card { background: rgba(13, 13, 20, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(168, 85, 247, 0.15); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); }
+        .glass-card:hover { border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.15); }
+        .glow-text { text-shadow: 0 0 25px rgba(168, 85, 247, 0.6); }
+        .glow-box { box-shadow: 0 0 50px -10px rgba(168, 85, 247, 0.2); }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050508; }
+        ::-webkit-scrollbar-thumb { background: #3b0764; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b21a8; }
     </style>
 </head>
 <body class="selection:bg-purple-500 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#07070b]/80 backdrop-blur-md border-b border-white/5 px-6 lg:px-16 py-4 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#050508]/85 backdrop-blur-xl border-b border-purple-500/10 px-6 lg:px-16 py-4 flex justify-between items-center transition-all duration-300">
         <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-purple-900/50 border border-purple-400/30">
+                <i class="fa-solid fa-sparkles text-white text-sm"></i>
+            </div>
             <span class="title-font text-2xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent tracking-wider">
                 THẦN VỰC
             </span>
         </div>
-        <nav class="hidden lg:flex space-x-8 text-sm font-semibold tracking-wide text-gray-300">
-            <a href="#trangchu" class="hover:text-purple-400 transition">TRANG CHỦ</a>
-            <a href="#congdong" class="hover:text-purple-400 transition">CỘNG ĐỒNG</a>
-            <a href="#cuahang" class="hover:text-purple-400 transition">CỬA HÀNG</a>
-            <a href="#tinhnang" class="hover:text-purple-400 transition">TÍNH NĂNG</a>
-            <a href="#vatpham" class="hover:text-purple-400 transition">VẬT PHẨM</a>
-            <a href="#boss" class="hover:text-purple-400 transition">BOSS & DROP</a>
+        
+        <nav class="hidden lg:flex space-x-6 text-xs font-bold tracking-wider text-gray-300">
+            <a href="#trangchu" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">TRANG CHỦ</a>
+            <a href="#tinhnang" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">TÍNH NĂNG</a>
+            <a href="#vatpham" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">VẬT PHẨM</a>
+            <a href="#boss" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">BOSS & DROP</a>
+            <a href="#cuahang" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">CỬA HÀNG</a>
+            <a href="#congdong" class="hover:text-purple-400 transition py-1 border-b-2 border-transparent hover:border-purple-400">CỘNG ĐỒNG</a>
         </nav>
-        <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-lg shadow-purple-900/30 transition">
-            Tham Gia Ngay
-        </a>
+
+        <div class="flex items-center gap-3">
+            <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-lg shadow-purple-900/40 transition flex items-center gap-2 border border-purple-400/30">
+                <i class="fa-brands fa-discord text-sm"></i> Discord
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="trangchu" class="relative min-h-screen flex items-center justify-between px-6 lg:px-24 pt-28 pb-16 overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none -top-20 -left-20"></div>
+        <div class="absolute w-[600px] h-[600px] bg-purple-600/15 blur-[180px] rounded-full pointer-events-none -top-20 -left-20"></div>
+        <div class="absolute w-[400px] h-[400px] bg-cyan-600/10 blur-[150px] rounded-full pointer-events-none bottom-0 right-10"></div>
         
         <div class="max-w-2xl z-10">
-            <span class="inline-block bg-purple-500/10 text-purple-300 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 border border-purple-500/20">
-                ✨ Thần Vực Network - Minecraft Tu Tiên
+            <span class="inline-flex items-center gap-2 bg-purple-500/10 text-purple-300 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 border border-purple-500/25 shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Server Minecraft Tu Tiên Thế Hệ Mới
             </span>
-            <h1 class="title-font text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white glow-text">
-                THẦN VỰC
+            <h1 class="title-font text-5xl lg:text-7xl font-black tracking-tight mb-6 text-white glow-text">
+                THẦN VỰC <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">NETWORK</span>
             </h1>
-            <p class="text-gray-400 text-base lg:text-lg mb-8 leading-relaxed">
-                Một thế giới tu tiên được xây dựng từ cảnh giới, thể chất, công pháp và hàng trăm thần binh. Từ phàm nhân vô danh, tự tay viết nên tiên lộ của riêng ngươi.
+            <p class="text-gray-400 text-base lg:text-lg mb-8 leading-relaxed font-light">
+                Hành trình nghịch thiên cải mệnh, từ phàm nhân vô danh bước lên đỉnh cao đại đạo. Khám phá hệ thống cảnh giới đồ sộ, công pháp uy bá và trăm ngàn thần binh lợi khí.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#tinhnang" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg shadow-cyan-500/20">
-                    Bắt Đầu Tiên Đồ
+                <a href="#tinhnang" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold px-8 py-4 rounded-xl text-sm transition shadow-lg shadow-cyan-500/25 flex items-center gap-2">
+                    <i class="fa-solid fa-compass"></i> Khám Phá Cẩm Nang
                 </a>
-                <a href="#tinhnang" class="glass-card hover:bg-white/5 text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition">
-                    Khám Phá Tính Năng
+                <a href="#cuahang" class="glass-card text-white font-semibold px-7 py-4 rounded-xl text-sm transition flex items-center gap-2 hover:bg-white/5">
+                    <i class="fa-solid fa-gem text-amber-400"></i> Hỗ Trợ Server
                 </a>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-white/5 max-w-lg">
+                <div>
+                    <p class="text-2xl font-black title-font text-purple-400">25,000</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Cấp Độ Tu Vi</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-black title-font text-cyan-400">100+</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Thần Binh Pháp Bảo</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-black title-font text-amber-400">24/7</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Ổn Định Mượt Mà</p>
+                </div>
             </div>
         </div>
 
+        <!-- IP Card Widget -->
         <div class="hidden lg:flex flex-col items-center justify-center z-10 relative">
-            <div class="w-72 h-72 rounded-full border border-purple-500/30 flex items-center justify-center relative animate-pulse">
-                <div class="absolute inset-0 rounded-full border border-pink-500/20 scale-125"></div>
-                <div class="text-center">
-                    <p class="text-xs text-purple-400 uppercase tracking-widest font-bold">IP Server</p>
-                    <p class="title-font text-xl font-bold text-white mt-1">thanvucmc.xyz</p>
-                    <button onclick="navigator.clipboard.writeText('thanvucmc.xyz'); alert('Đã sao chép IP thanvucmc.xyz!');" class="mt-3 bg-purple-600/30 hover:bg-purple-600/50 text-purple-300 border border-purple-500/40 text-xs px-4 py-1.5 rounded-lg transition">
-                        Sao Chép IP
+            <div class="w-80 h-80 rounded-full border border-purple-500/30 flex items-center justify-center relative glow-box bg-purple-950/10 backdrop-blur-md">
+                <div class="absolute inset-0 rounded-full border border-pink-500/20 scale-110 animate-spin" style="animation-duration: 20s;"></div>
+                <div class="absolute inset-0 rounded-full border border-dashed border-cyan-500/20 scale-125 animate-spin" style="animation-duration: 30s; animation-direction: reverse;"></div>
+                <div class="text-center p-6 z-10">
+                    <span class="inline-block px-3 py-1 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase rounded-full border border-emerald-500/20 mb-2">
+                        <i class="fa-solid fa-circle text-[8px] mr-1"></i> Online Hoạt Động
+                    </span>
+                    <p class="text-xs text-purple-300 uppercase tracking-widest font-semibold">Địa Chỉ IP Server</p>
+                    <p class="title-font text-xl font-black text-white mt-1 tracking-wide">thanvucmc.xyz</p>
+                    <button onclick="navigator.clipboard.writeText('thanvucmc.xyz'); alert('Đã sao chép IP thanvucmc.xyz thành công!');" class="mt-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs px-6 py-2.5 rounded-xl transition shadow-md shadow-purple-900/50 flex items-center gap-2 mx-auto">
+                        <i class="fa-solid fa-copy"></i> Sao Chép IP
                     </button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Section -->
-    <section id="congdong" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <p class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-2">Mạng Xã Hội</p>
-            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white">Cộng Đồng Thần Vực</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-            <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="glass-card p-8 rounded-2xl text-center group transition">
-                <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mx-auto mb-4 text-indigo-400 group-hover:scale-110 transition">
-                    <i class="fa-brands fa-discord text-2xl"></i>
-                </div>
-                <h3 class="title-font font-bold text-lg text-white mb-2">Discord Chính</h3>
-                <p class="text-gray-400 text-sm">Hỗ trợ báo lỗi, chém gió 24/7 cùng anh em tu sĩ.</p>
-            </a>
-            <div class="glass-card p-8 rounded-2xl text-center group transition">
-                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mx-auto mb-4 text-blue-400 group-hover:scale-110 transition">
-                    <i class="fa-brands fa-facebook text-2xl"></i>
-                </div>
-                <h3 class="title-font font-bold text-lg text-white mb-2">Fanpage Facebook</h3>
-                <p class="text-gray-400 text-sm">Cập nhật tin tức & Event Code quà tặng mới nhất.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl text-center group transition">
-                <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mx-auto mb-4 text-pink-400 group-hover:scale-110 transition">
-                    <i class="fa-brands fa-tiktok text-2xl"></i>
-                </div>
-                <h3 class="title-font font-bold text-lg text-white mb-2">Kênh TikTok</h3>
-                <p class="text-gray-400 text-sm">Xem video highlight độ kiếp và săn boss cực chất.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Store / Donate Section -->
-    <section id="cuahang" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center mb-16">
-            <p class="text-xs text-amber-400 font-bold uppercase tracking-widest mb-2">Hỗ Trợ Máy Chủ</p>
-            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Cửa Hàng & Donate</h2>
-            <p class="text-gray-400 text-sm max-w-xl mx-auto">Quyên góp của bạn là nguồn động lực lớn nhất để máy chủ duy trì và phát triển tính năng mới.</p>
-        </div>
-        
-        <div class="glass-card p-8 rounded-2xl max-w-3xl mx-auto text-center mb-12">
-            <h3 class="title-font text-xl font-bold text-amber-300 mb-6">Mốc Donate Nhận Linh Thạch</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
-                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                    <p class="text-xs text-gray-400">10,000 VNĐ</p>
-                    <p class="text-amber-400 font-bold mt-1">3,000 Linh Thạch</p>
-                </div>
-                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                    <p class="text-xs text-gray-400">50,000 VNĐ</p>
-                    <p class="text-amber-400 font-bold mt-1">15,000 Linh Thạch</p>
-                </div>
-                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                    <p class="text-xs text-gray-400">100,000 VNĐ</p>
-                    <p class="text-amber-400 font-bold mt-1">30,000 Linh Thạch</p>
-                </div>
-                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                    <p class="text-xs text-gray-400">500,000 VNĐ</p>
-                    <p class="text-amber-400 font-bold mt-1">150,000 Linh Thạch</p>
-                </div>
-            </div>
-            <div class="mt-8">
-                <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="inline-block bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/20">
-                    Mở Kênh Donate Bằng Discord
-                </a>
             </div>
         </div>
     </section>
@@ -145,46 +113,224 @@
     <!-- Features / Wiki Section -->
     <section id="tinhnang" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
         <div class="text-center mb-16">
-            <p class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-2">Cẩm Nang Người Chơi</p>
-            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Hệ Thống Tính Năng Vạn Giới</h2>
-            <p class="text-gray-400 text-sm">Tra cứu điều kiện, cách tham gia, lệnh sử dụng và phần thưởng chi tiết.</p>
+            <p class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-2">Hệ Thống Đặc Sắc</p>
+            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Cẩm Nang Tu Tiên</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Tra cứu điều kiện, phương thức tu luyện và các mốc tiến cấp quan trọng trong thế giới Thần Vực.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="text-purple-400 text-3xl mb-4"><i class="fa-solid fa-scroll"></i></div>
-                <h3 class="title-font font-bold text-xl text-white mb-2">1. Tổng Quan Tu Vi</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Nhân vật mạnh lên qua nhiều hệ thống nối tiếp nhau: nhiệm vụ mở nội dung, Thiên tạo tiến độ dài hạn, Linh Khí dùng để Đột Phá, trang bị và công pháp quyết định khả năng chiến đấu.
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl mb-5 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition duration-300">
+                    <i class="fa-solid fa-scroll"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Tổng Quan Tu Vi</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Hệ thống tiến độ dài hạn, tích lũy linh khí qua thời gian thực để đột phá bình cảnh, mở khóa chức năng tối tân.
                 </p>
             </div>
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="text-purple-400 text-3xl mb-4"><i class="fa-solid fa-mountain"></i></div>
-                <h3 class="title-font font-bold text-xl text-white mb-2">2. Hệ Thống Cảnh Giới</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Giới hạn tu vi hiện tại lên tới Lv.25000. Trải dài qua các tầng: Luyện Thể, Ngưng Khí, Trúc Cơ, Kim Đan, Nguyên Anh, Hóa Thần cho đến Đại Thiên Tôn và Đạp Thiên Cảnh.
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
+                <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 text-xl mb-5 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-black transition duration-300">
+                    <i class="fa-solid fa-mountain"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Hệ Thống Cảnh Giới</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Từ Luyện Thể, Ngưng Khí cho đến Hóa Thần, Đại Thiên Tôn và đỉnh cao Đạp Thiên Cảnh với 25,000 cấp độ.
                 </p>
             </div>
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="text-purple-400 text-3xl mb-4"><i class="fa-solid fa-dragon"></i></div>
-                <h3 class="title-font font-bold text-xl text-white mb-2">3. Linh Thú & Thần Binh</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Sưu tầm hệ thống Linh Thú độc quyền sát cánh chiến đấu. Chế tạo pháp bảo thượng cổ để gia tăng chỉ số phòng thủ và sát thương chí mạng.
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
+                <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center text-pink-400 text-xl mb-5 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300">
+                    <i class="fa-solid fa-dragon"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Linh Thú & Pháp Bảo</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Sưu tầm thần thú độc quyền sát cánh chiến đấu, chế tạo thượng cổ pháp bảo gia tăng chí mạng và phòng thủ.
                 </p>
             </div>
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="text-purple-400 text-3xl mb-4"><i class="fa-solid fa-bolt"></i></div>
-                <h3 class="title-font font-bold text-xl text-white mb-2">4. Độ Kiếp Phi Thăng</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Vượt qua các tầng Thiên Kiếp khắc nghiệt để đột phá giới hạn bản thân, nhận danh hiệu độc quyền và phần thưởng vô giá.
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Độ Kiếp Phi Thăng</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Vượt qua các tầng lôi kiếp đầy cam go để chuyển hóa bản mệnh, nhận danh hiệu uy phong lẫm liệt khắp cõi.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Items / Vật Phẩm Section -->
+    <section id="vatpham" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center mb-16">
+            <p class="text-xs text-amber-400 font-bold uppercase tracking-widest mb-2">Kho Tàng Bí Bảo</p>
+            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Vật Phẩm & Đan Dược</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Một số tài nguyên và bảo vật quan trọng giúp tăng tốc độ tu luyện của tu sĩ.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl shrink-0">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] bg-amber-500/10 text-amber-300 px-2.5 py-0.5 rounded font-bold uppercase">Đan Dược</span>
+                    <h3 class="title-font font-bold text-base text-white mt-1 mb-1">Tụ Linh Đan Thượng Phẩm</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Tăng gấp đôi tốc độ hấp thụ linh khí xung quanh trong vòng 1 giờ đồng hồ.</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl shrink-0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] bg-purple-500/10 text-purple-300 px-2.5 py-0.5 rounded font-bold uppercase">Pháp Bảo</span>
+                    <h3 class="title-font font-bold text-base text-white mt-1 mb-1">Hộ Thân Cổ Kính</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Giúp giảm thiểu 35% sát thương nhận phải khi tiến hành độ kiếp vượt tầng.</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl shrink-0">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] bg-cyan-500/10 text-cyan-300 px-2.5 py-0.5 rounded font-bold uppercase">Tiền Tệ</span>
+                    <h3 class="title-font font-bold text-base text-white mt-1 mb-1">Linh Thạch Cao Cấp</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Đơn vị giao dịch chính dùng để mua bán nguyên liệu và đấu giá vật phẩm hiếm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boss & Drop Section -->
+    <section id="boss" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center mb-16">
+            <p class="text-xs text-rose-400 font-bold uppercase tracking-widest mb-2">Thử Thách Cực Hạn</p>
+            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Boss Thế Giới & Drop Rate</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Săn boss thượng cổ để nhận các trang bị cam và nguyên liệu quý hiếm hàng tuần.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-2xl border-rose-500/20">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="title-font font-bold text-xl text-rose-300 flex items-center gap-2">
+                        <i class="fa-solid fa-skull"></i> Cửu Vĩ Thiên Hồ
+                    </h3>
+                    <span class="text-xs bg-rose-500/10 text-rose-400 px-3 py-1 rounded-full border border-rose-500/20 font-semibold">Boss Cấp Cao</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed mb-6">Xuất hiện tại bí cảnh Hồ Quang mỗi tối lúc 20:00. Yêu cầu tổ đội từ 3-5 tu sĩ đạt cảnh giới Kim Đan trở lên.</p>
+                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                    <p class="text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">Phần Thưởng Rơi Ra:</p>
+                    <ul class="text-xs text-gray-400 space-y-1.5">
+                        <li class="flex items-center justify-between"><span>✨ Lông Vỹ Thiên Hồ (Nguyên liệu chế tạo)</span> <span class="text-amber-400 font-bold">Tỷ lệ: 15%</span></li>
+                        <li class="flex items-center justify-between"><span>✨ Đan Dược Đột Phá Nguyên Anh</span> <span class="text-amber-400 font-bold">Tỷ lệ: 40%</span></li>
+                        <li class="flex items-center justify-between"><span>✨ Pháp Bảo Cấp Cao (Cam)</span> <span class="text-amber-400 font-bold">Tỷ lệ: 5%</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border-purple-500/20">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="title-font font-bold text-xl text-purple-300 flex items-center gap-2">
+                        <i class="fa-solid fa-dragon"></i> Ma Long Thượng古
+                    </h3>
+                    <span class="text-xs bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20 font-semibold">Boss Thế Giới</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed mb-6">Thống lĩnh vực sâu Thâm uyên, có sức sát thương diện rộng cực lớn. Thích hợp cho các tông môn lớn hợp sức chinh phục.</p>
+                <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                    <p class="text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">Phần Thưởng Rơi Ra:</p>
+                    <ul class="text-xs text-gray-400 space-y-1.5">
+                        <li class="flex items-center justify-between"><span>✨ Long Lân Thượng Cổ</span> <span class="text-amber-400 font-bold">Tỷ lệ: 10%</span></li>
+                        <li class="flex items-center justify-between"><span>✨ Công Pháp Độc Quyền (Thi Giai)</span> <span class="text-amber-400 font-bold">Tỷ lệ: 3%</span></li>
+                        <li class="flex items-center justify-between"><span>✨ Linh Thạch Vô Chủ (Số lượng lớn)</span> <span class="text-amber-400 font-bold">Tỷ lệ: 100%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store / Donate Section -->
+    <section id="cuahang" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center mb-16">
+            <p class="text-xs text-amber-400 font-bold uppercase tracking-widest mb-2">Đồng Hành Phát Triển</p>
+            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Cửa Hàng & Donate</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Quyên góp của bạn giúp máy chủ duy trì hoạt động lâu dài và phát triển thêm nhiều tính năng độc đáo.</p>
+        </div>
+        
+        <div class="glass-card p-8 lg:p-12 rounded-3xl max-w-4xl mx-auto text-center border-amber-500/30 glow-box">
+            <h3 class="title-font text-2xl font-bold text-amber-300 mb-2">Mốc Hỗ Trợ Nhận Linh Thạch</h3>
+            <p class="text-gray-400 text-xs mb-8">Quy đổi tự động qua hệ thống Discord tự động hoặc liên hệ trực tiếp Admin.</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left mb-8">
+                <div class="bg-black/50 p-5 rounded-2xl border border-white/5 transition hover:border-amber-500/50">
+                    <p class="text-xs text-gray-400 font-medium">10,000 VNĐ</p>
+                    <p class="text-amber-400 font-black text-lg mt-1">3,000 Linh Thạch</p>
+                    <span class="inline-block mt-3 text-[10px] text-gray-500">+ Tặng kèm 1 Tụ Linh Đan</span>
+                </div>
+                <div class="bg-black/50 p-5 rounded-2xl border border-white/5 transition hover:border-amber-500/50">
+                    <p class="text-xs text-gray-400 font-medium">50,000 VNĐ</p>
+                    <p class="text-amber-400 font-black text-lg mt-1">15,000 Linh Thạch</p>
+                    <span class="inline-block mt-3 text-[10px] text-gray-500">+ Tặng kèm 5 Tụ Linh Đan</span>
+                </div>
+                <div class="bg-black/50 p-5 rounded-2xl border border-white/5 transition hover:border-amber-500/50">
+                    <p class="text-xs text-gray-400 font-medium">100,000 VNĐ</p>
+                    <p class="text-amber-400 font-black text-lg mt-1">30,000 Linh Thạch</p>
+                    <span class="inline-block mt-3 text-[10px] text-gray-500">+ Tặng kèm VIP 7 Ngày</span>
+                </div>
+                <div class="bg-black/50 p-5 rounded-2xl border border-white/5 transition hover:border-amber-500/50">
+                    <p class="text-xs text-gray-400 font-medium">500,000 VNĐ</p>
+                    <p class="text-amber-400 font-black text-lg mt-1">150,000 Linh Thạch</p>
+                    <span class="inline-block mt-3 text-[10px] text-gray-500">+ Tặng kèm Danh Hiệu Độc Quyền</span>
+                </div>
+            </div>
+
+            <div>
+                <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-black font-extrabold px-9 py-4 rounded-xl text-sm transition shadow-lg shadow-amber-500/20">
+                    <i class="fa-brands fa-discord text-base"></i> Mở Kênh Donate Bằng Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="congdong" class="py-24 px-6 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center mb-16">
+            <p class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-2">Mạng Xã Hội</p>
+            <h2 class="title-font text-3xl lg:text-4xl font-bold text-white mb-4">Cộng Đồng Thần Vực</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Tham gia ngay các nền tảng để không bỏ lỡ giftcode và thông báo cập nhật mới nhất.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="glass-card p-8 rounded-2xl text-center group transition block">
+                <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 text-indigo-400 text-2xl group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition duration-300">
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Discord Chính Thức</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Hỗ trợ báo lỗi, tra cứu thông tin game, giao lưu trò chuyện cùng cộng đồng tu sĩ 24/7.</p>
+            </a>
+            
+            <div class="glass-card p-8 rounded-2xl text-center group transition">
+                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 text-blue-400 text-2xl group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition duration-300">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Fanpage Facebook</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Cập nhật tin tức sự kiện mới nhất, event phát code trải nghiệm mỗi tuần cho tân thủ.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl text-center group transition">
+                <div class="w-14 h-14 bg-pink-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 text-pink-400 text-2xl group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <h3 class="title-font font-bold text-lg text-white mb-2">Kênh TikTok Video</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Xem những thước phim highlight độ kiếp, săn boss nghẹt thở và khoảnh khắc độc lạ trong game.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="text-center py-12 border-t border-white/5 text-gray-500 text-xs tracking-wider">
-        <p>&copy; 2026 Thần Vực Network. All rights reserved. Server IP: thanvucmc.xyz</p>
+    <footer class="text-center py-12 border-t border-white/5 text-gray-500 text-xs tracking-wider bg-[#030305]">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Thần Vực Network. All rights reserved.</p>
+            <p class="text-purple-400 font-semibold">Server IP: thanvucmc.xyz</p>
+        </div>
     </footer>
 
 </body>

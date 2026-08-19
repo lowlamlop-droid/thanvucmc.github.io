@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thần Vực MC - Server Minecraft Việt Nam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-white font-sans selection:bg-purple-500 selection:text-white">
+
+    <!-- Header / Nav -->
+    <header class="flex justify-between items-center px-8 py-6 border-b border-gray-800">
+        <div class="text-2xl font-black tracking-wider text-purple-400">
+            <i class="fa-solid fa-dragon mr-2"></i>THẦN VỰC MC
+        </div>
+        <nav class="space-x-6 hidden md:block">
+            <a href="#" class="hover:text-purple-400 transition">Trang Chủ</a>
+            <a href="#about" class="hover:text-purple-400 transition">Giới Thiệu</a>
+            <a href="#store" class="hover:text-purple-400 transition">Cửa Hàng</a>
+            <a href="https://discord.gg/yourlink" target="_blank" class="hover:text-purple-400 transition">Discord</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center py-24 px-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-gray-950 to-gray-950">
+        <span class="bg-purple-900/60 text-purple-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
+            🔥 Phiên bản mới chính thức khai mở!
+        </span>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            CHINH PHỤC THẦN VỰC
+        </h1>
+        <p class="max-w-2xl text-gray-400 text-lg mb-10">
+            Hệ thống Survival độc đáo, cộng đồng văn minh, nhiều tính năng cuốn hút đang chờ đón các anh hùng khám phá.
+        </p>
+
+        <!-- IP Copy Box -->
+        <div class="bg-gray-900 border border-purple-500/30 p-2 pl-6 rounded-2xl flex items-center justify-between shadow-2xl shadow-purple-900/20 max-w-md w-full">
+            <div class="text-left">
+                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">IP Server</p>
+                <p id="server-ip" class="font-bold text-lg text-purple-300">thanvucmc.vn</p>
+            </div>
+            <button onclick="copyIP()" class="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-medium transition flex items-center gap-2">
+                <i class="fa-regular fa-copy"></i> Copy IP
+            </button>
+        </div>
+        <p id="copy-notice" class="text-xs text-green-400 mt-2 h-4"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 border-t border-gray-900 text-gray-500 text-sm">
+        <p>&copy; 2026 Thần Vực MC. All rights reserved.</p>
+    </footer>
+
+    <!-- Script copy IP -->
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("thanvucmc.vn");
+            const notice = document.getElementById("copy-notice");
+            notice.innerText = "Đã copy IP thành công! Vào game chiến thôi!";
+            setTimeout(() => { notice.innerText = ""; }, 3000);
+        }
+    </script>
+</body>
+</html>

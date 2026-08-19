@@ -1,84 +1,58 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thần Vực MC - Huyền Thoại Tu Tiên</title>
+    <title>Thần Vực Wiki - Cẩm Nang Tu Tiên</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .title-font { font-family: 'Cinzel', serif; }
-        .glass { background: rgba(20, 20, 25, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(245, 158, 11, 0.2); }
+        body { background-color: #0d1117; color: #c9d1d9; font-family: sans-serif; }
+        .sidebar { border-right: 1px solid #30363d; }
+        .nav-link:hover { color: #58a6ff; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
     </style>
 </head>
-<body class="bg-[#050508] text-white">
+<body class="flex min-h-screen">
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 glass px-8 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="/thanvucmc.github.io/logo.png" alt="Logo" class="w-8 h-8 rounded-full border border-amber-500/50 object-cover">
-            <span class="title-font text-xl font-bold text-amber-400">THẦN VỰC MC</span>
-        </div>
-        <nav class="space-x-6 text-sm font-medium">
-            <a href="#home" class="hover:text-amber-400 transition">Trang Chủ</a>
-            <a href="#wiki" class="hover:text-amber-400 transition">Wiki Tu Tiên</a>
-            <a href="#gallery" class="hover:text-amber-400 transition">Ảnh Server</a>
-            <a href="https://discord.gg/5hD3fv3M3W" target="_blank" class="text-indigo-400">Discord</a>
+    <!-- Sidebar Menu -->
+    <aside class="sidebar w-64 p-6 hidden md:block">
+        <h1 class="text-xl font-bold text-white mb-8">Thần Vực Wiki</h1>
+        <nav class="space-y-4">
+            <a href="#tuvi" class="nav-link block">Hệ thống Tu Vi</a>
+            <a href="#pet" class="nav-link block">Linh Thú & Pet</a>
+            <a href="#phapbao" class="nav-link block">Pháp Bảo</a>
+            <a href="https://discord.gg/5hD3fv3M3W" class="nav-link block text-indigo-400">Discord Cộng đồng</a>
         </nav>
-    </header>
+    </aside>
 
-    <!-- Hero -->
-    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
-        <img src="/thanvucmc.github.io/logo.png" alt="Logo Lớn" class="w-36 h-36 rounded-full border-4 border-amber-500/30 shadow-2xl shadow-amber-500/20 mb-8 object-cover">
-        <h1 class="title-font text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">THẦN VỰC MC</h1>
-        <p class="text-gray-400 max-w-lg mb-8">Hành trình tu tiên huyền bí. Khai phá sức mạnh, triệu hồi linh thú, đoạt ngôi vị tối cao.</p>
-        <div class="glass p-4 rounded-xl flex items-center gap-4">
-            <span class="text-amber-400 font-mono text-xl">thanvucmc.xyz</span>
-            <button onclick="navigator.clipboard.writeText('thanvucmc.xyz')" class="bg-amber-600 px-6 py-2 rounded-lg font-bold hover:bg-amber-500 transition">Sao chép IP</button>
+    <!-- Main Content -->
+    <main class="flex-1 p-8 md:p-16">
+        <h1 class="text-4xl font-bold text-white mb-6">Chào mừng đến với Thần Vực Wiki</h1>
+        <p class="text-lg mb-8">Trang thông tin chính thức cho server Minecraft tu tiên <b>thanvucmc.xyz</b>.</p>
+
+        <section id="tuvi" class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Hệ thống Tu Vi</h2>
+            <p>Hệ thống tu luyện chia thành các tầng: Luyện Khí, Trúc Cơ, Kim Đan, Nguyên Anh, Hóa Thần, Đại Thừa.</p>
+            <ul class="list-disc ml-5 mt-2">
+                <li>Đạt cấp độ mới nhận được x2 máu.</li>
+                <li>Mở khóa kỹ năng bay lượn ở cảnh giới Kim Đan.</li>
+            </ul>
+        </section>
+
+        <section id="pet" class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Linh Thú (Pet)</h2>
+            <p>Linh thú có 3 phẩm chất: Thường, Hiếm, Huyền Thoại.</p>
+            <img src="/thanvucmc.github.io/anh1.png" class="mt-4 rounded-lg shadow-lg" alt="Linh thú">
+        </section>
+
+        <section id="phapbao" class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Pháp Bảo</h2>
+            <p>Pháp bảo thu thập được qua việc đánh Boss tại các phụ bản huyền bí.</p>
+        </section>
+        
+        <div class="mt-10 p-4 bg-yellow-900/20 border border-yellow-700/50 rounded-lg text-center">
+            <p class="text-yellow-500 font-bold">IP Server: thanvucmc.xyz</p>
         </div>
-    </section>
-
-    <!-- Wiki Section -->
-    <section id="wiki" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="title-font text-4xl text-center mb-12 text-amber-400">WIKI TU TIÊN</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass p-6 rounded-2xl">
-                <i class="fa-solid fa-scroll text-3xl text-amber-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Hệ Thống Tu Vi</h3>
-                <p class="text-gray-400 text-sm">Từ Luyện Khí đến Đại Thừa. Đột phá cảnh giới để gia tăng chỉ số sức mạnh, mở khóa kỹ năng độc quyền.</p>
-            </div>
-            <div class="glass p-6 rounded-2xl">
-                <i class="fa-solid fa-dragon text-3xl text-amber-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Linh Thú (Pet)</h3>
-                <p class="text-gray-400 text-sm">Sưu tầm hơn 50 loại linh thú từ sơ cấp đến thần thú. Tiến hóa chúng để cùng sát cánh chiến đấu.</p>
-            </div>
-            <div class="glass p-6 rounded-2xl">
-                <i class="fa-solid fa-wand-sparkles text-3xl text-amber-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Pháp Bảo & Trang Bị</h3>
-                <p class="text-gray-400 text-sm">Rèn pháp bảo từ linh thạch, chế tạo thần khí hủy thiên diệt địa để trấn áp các thế lực ma đạo.</p>
-            </div>
-            <div class="glass p-6 rounded-2xl">
-                <i class="fa-solid fa-bolt text-3xl text-amber-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Độ Kiếp Phi Thăng</h3>
-                <p class="text-gray-400 text-sm">Vượt qua các tầng Thiên Kiếp khắc nghiệt để nhận thưởng cực lớn và danh hiệu vĩnh cửu.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="title-font text-4xl text-center mb-12 text-amber-400">THẾ GIỚI THẦN VỰC</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img src="/thanvucmc.github.io/anh1.png" class="rounded-xl border border-amber-500/30 h-64 w-full object-cover">
-            <img src="/thanvucmc.github.io/anh2.png" class="rounded-xl border border-amber-500/30 h-64 w-full object-cover">
-            <img src="/thanvucmc.github.io/anh3.png" class="rounded-xl border border-amber-500/30 h-64 w-full object-cover">
-        </div>
-    </section>
-
-    <footer class="text-center py-10 border-t border-white/5 text-gray-500 text-sm">
-        &copy; 2026 Thần Vực MC - thanvucmc.xyz
-    </footer>
+    </main>
 </body>
 </html>
